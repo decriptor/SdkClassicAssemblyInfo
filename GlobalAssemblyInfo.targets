@@ -1,0 +1,19 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <Target Name="GenerateGlobalAssemblyInfo" BeforeTargets="CoreCompile">
+        <Delete Files="$(IntermediateOutputPath)GeneratedAssemblyInfo.cs" />
+        <WriteLinesToFile
+            File="$(IntermediateOutputPath)GeneratedAssemblyInfo.cs"
+            Lines="@(GeneratedAssemblyAttributes)" />
+    </Target>
+
+    <ItemGroup>
+        <GeneratedAssemblyAttributes Include="[assembly: System.Reflection.AssemblyCompany(&quot;$(Company)&quot;)]" />
+        <GeneratedAssemblyAttributes Include="[assembly: System.Reflection.AssemblyMetadata(&quot;Author&quot;, &quot;$(Authors)&quot;)]" />
+        <GeneratedAssemblyAttributes Include="[assembly: System.Reflection.AssemblyProduct(&quot;$(Product)&quot;)]" />
+        <GeneratedAssemblyAttributes Include="[assembly: System.Reflection.AssemblyCopyright(&quot;$(Copyright)&quot;)]" />
+        <GeneratedAssemblyAttributes Include="[assembly: System.Reflection.AssemblyVersion(&quot;$(Version)&quot;)]" />
+        <GeneratedAssemblyAttributes Include="[assembly: System.Reflection.AssemblyConfiguration(&quot;$(Configuration)&quot;)]" />
+    </ItemGroup>
+
+</Project>

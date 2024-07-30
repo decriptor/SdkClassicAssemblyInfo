@@ -1,0 +1,15 @@
+<Project>
+
+    <PropertyGroup>
+		<Company>My Company</Company>
+		<Authors>My Authors</Authors>
+		<Product>My Product</Product>
+		<Copyright>Copyright © My Company 2024</Copyright>
+		<Version>2.5.3.0</Version>
+    </PropertyGroup>
+
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	</PropertyGroup>
+
+</Project>
